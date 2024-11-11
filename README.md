@@ -171,7 +171,7 @@ session.commit()
 db.Model(&User{}).Where("id = ?", 1).Update("email", "newemail@example.com")
 
 ### Postgresql
-SELECT * FROM user WHERE is_active = TRUE OR is_admin = TRUE;
+UPDATE user SET email = 'newemail@example.com' WHERE id = 1;
 ```
 
 ## 12. Delete a user
